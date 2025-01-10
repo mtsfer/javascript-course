@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 11n</title>
+  </head>
+  <body>
+    <script>
+      console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+
+      function countWords(words) {
+        const wordsFrequency = {};
+        
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+          if (wordsFrequency[word]) {
+            wordsFrequency[word]++;
+          } else {
+            wordsFrequency[word] = 1;
+          }
+        }
+        return wordsFrequency;
+      }
+    </script>
+  </body>
+</html>
+

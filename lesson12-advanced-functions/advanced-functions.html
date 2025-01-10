@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Advanced Functions</title>
+</head>
+<body>
+<button onclick="" class="js-button">Click</button>
+
+<script>
+    /*
+    const buttonElement = document.querySelector(".js-button");
+
+    // Event Listeners allows us to add multiple event listeners to the same event
+    // and remove an event listener. Better to use then HTML attributes
+    const eventListener = () => {
+        console.log("click");
+    };
+    buttonElement.addEventListener("click", eventListener);
+
+    buttonElement.removeEventListener("click", eventListener);
+
+    buttonElement.addEventListener("click", () => {
+        console.log("click2");
+    });
+    */
+
+    /*
+    // hoisting: interpreter move functions, classes, variables and imports
+    // to the top of their scope, prior to execution of code
+    greeting();
+
+    function greeting() {
+        console.log("hello");
+    }
+
+    greeting();
+
+    const num = 2;
+    // Functions are values, so we can save them in variables
+    // Saving function in a variable remove hoisting
+    const function1 = function () {
+        console.log("hello2");
+    };
+    console.log(function1);
+    console.log(typeof function1);
+    function1();
+
+    const object1 = {
+        num: 2,
+        fun: function() {
+            console.log("hello3");
+        }
+    };
+
+    object1.fun(); // fun is a method: function saved inside an object
+
+    function display(param) {
+        console.log(param);
+    }
+    display(2);
+
+    function run(param) {
+       param();
+    }
+    run(function() { // this anonymous function is called a callback (passed to another function)
+        console.log("hello4");
+    });
+    */
+
+    /*
+    // Asynchronous code: won't wait for a line to finish before going to the next line
+    // Goes to the next line, don't wait here until the function is called
+    setTimeout(function () {
+        // Synchronous code: will wait for one line to finish before going to the next line
+        console.log("timeout");
+        console.log("timeout2");
+    }, 3000);
+    console.log("next line");
+
+    // Will repeat this code every x milliseconds
+    setInterval(function () {
+        console.log("interval");
+    }, 3000);
+    console.log("next line 2");
+    */
+
+    /*
+    [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+    ].forEach((value, index) => {
+        // for each do not have a break
+        // so if break is needed, it's better to use a regular for loop
+        // this condition does the same thing as continue in a for loop
+        if (value === 'wash dishes') return;
+        console.log(index);
+        console.log(value);
+    });
+
+    const regularFunction = function (param, param2) {
+        console.log("hello");
+        return 5;
+    };
+
+    const arrowFunction = (param, param2) => {
+        console.log("hello");
+        return 5;
+    };
+
+    arrowFunction();
+
+    const oneParam = param => {
+        console.log(param + 1);
+    };
+    oneParam(2);
+
+    const oneLine = () => 2 + 3;
+    console.log(oneLine());
+
+    const object2 = {
+        method: () => {
+
+        },
+        method2() {
+
+        }
+    };
+    */
+
+    console.log([1, -3, 5].filter((value, index) => {
+        return value >= 0;
+    }));
+
+    console.log([1, 1, 3].map((value, index) => {
+        return value * 2;
+    }));
+
+    console.log([1, 1, 3].map(value => value * 2));
+</script>
+</body>
+</html>

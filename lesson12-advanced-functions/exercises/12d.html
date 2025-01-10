@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Exercise 12d</title>
+</head>
+<body>
+<button>Start</button>
+
+<script>
+    function updateButton() {
+        const buttonElement = document.querySelector("button");
+        buttonElement.textContent = "Loading...";
+        setTimeout(() => buttonElement.textContent = "Finished!", 1000);
+    }
+
+    document.querySelector("button").addEventListener("click", updateButton);
+</script>
+</body>
+</html>

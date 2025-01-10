@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Exercise 12f</title>
+</head>
+<body>
+<button>Add to cart</button>
+<p></p>
+
+<script>
+    let timeoutId;
+
+    function showMessage() {
+        const messageElement = document.querySelector("p");
+        messageElement.textContent = "Added";
+
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(() => messageElement.textContent = "", 2000);
+    }
+
+    document.querySelector("button").addEventListener("click", showMessage);
+</script>
+</body>
+</html>

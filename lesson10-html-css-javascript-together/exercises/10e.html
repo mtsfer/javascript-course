@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 10e</title>
+    <style>
+      .toggle-btn {
+        background-color: rgb(230, 230, 230);
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="
+      const gamingBtnElement = document.querySelector('.gaming-btn');
+      if (gamingBtnElement.classList.contains('is-toggled')) {
+        gamingBtnElement.classList.remove('is-toggled');
+      } else {
+        gamingBtnElement.classList.add('is-toggled');
+      }
+    " class="toggle-btn gaming-btn">Gaming</button>
+    
+    <button onclick="
+      const musicBtnElement = document.querySelector('.music-btn');
+      if (musicBtnElement.classList.contains('is-toggled')) {
+        musicBtnElement.classList.remove('is-toggled');
+      } else {
+        musicBtnElement.classList.add('is-toggled');
+      }
+    " class="toggle-btn music-btn">Music</button>
+
+    <button onclick="
+      const techBtnElement = document.querySelector('.tech-btn');
+      if (techBtnElement.classList.contains('is-toggled')) {
+        techBtnElement.classList.remove('is-toggled');
+      } else {
+        techBtnElement.classList.add('is-toggled');
+      }
+    " class="toggle-btn tech-btn">Tech</button>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercise 15e</title>
+</head>
+<body>
+<script type="module">
+    import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+
+    function isWeekend(date) {
+        const weekday = date.format("d");
+        return weekday === '0' || weekday === '6';
+    }
+
+    let date = dayjs();
+    console.log(date.format('dddd, MMMM D'));
+    console.log(isWeekend(date));
+
+    date = dayjs().add(2, 'day');
+    console.log(date.format('dddd, MMMM D'));
+    console.log(isWeekend(date));
+
+    date = dayjs().add(4, 'day');
+    console.log(date.format('dddd, MMMM D'));
+    console.log(isWeekend(date));
+
+    date = dayjs().add(6, 'day');
+    console.log(date.format('dddd, MMMM D'));
+    console.log(isWeekend(date));
+
+    date = dayjs().add(8, 'day');
+    console.log(date.format('dddd, MMMM D'));
+    console.log(isWeekend(date));
+</script>
+</body>
+</html>

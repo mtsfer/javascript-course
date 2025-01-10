@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exercise 9i</title>
+</head>
+
+<body>
+  <button onclick="
+    displayCartQuantity();
+  ">Show Quantity</button>
+
+  <button onclick="
+    updateCartQuantity(1);
+  ">Add to Cart</button>
+
+  <button onclick="
+    updateCartQuantity(2);
+  ">+2</button>
+
+  <button onclick="
+    updateCartQuantity(3);
+  ">+3</button>
+
+  <button onclick="
+    updateCartQuantity(4);
+  ">+4</button>
+
+  <button onclick="
+    updateCartQuantity(5);
+  ">+5</button>
+
+  <button onclick="
+    updateCartQuantity(-1);
+  ">Remove from cart</button>
+
+  <button onclick="
+    updateCartQuantity(-2);
+  ">-2</button>
+
+  <button onclick="
+    updateCartQuantity(-3);
+  ">-3</button>
+  
+  <button onclick="
+    cartQuantity = 0;
+    displayCartQuantity();
+  ">Reset Cart</button>
+
+  <p class="js-cart-quantity"></p>
+
+  <script>
+    function displayCartQuantity() {
+      document.querySelector('.js-cart-quantity').innerHTML = `Cart quantity: ${cartQuantity}`;
+    }
+
+    let cartQuantity = 0;
+
+    document.querySelector('.js-cart-quantity').innerHTML = `Cart quantity: ${cartQuantity}`;
+
+    function updateCartQuantity(quantity) {
+      if (cartQuantity + quantity < 0) {
+        alert('Not enough items in the cart');
+        return;
+      } 
+      
+      if (cartQuantity + quantity > 10) {
+        alert('The cart is full');
+        return;
+      }
+
+      cartQuantity += quantity;
+
+      displayCartQuantity();
+    }
+  </script>
+</body>
+
+</html>
+
+

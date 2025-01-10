@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 9d</title>
+  </head>
+  <body>
+    <input type="text" class="name-input" placeholder="Name">
+
+    <button onclick="
+      const name = document.querySelector('.name-input').value;
+      document.querySelector('.js-name-display').innerHTML = `Your name is: ${name}`;
+    " class="submit-btn">Submit</button>
+
+    <p class="js-name-display"></p>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercise 15f</title>
+</head>
+<body>
+<script type="module">
+  import isWeekend from "./15f.js";
+  import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+
+  let date = dayjs();
+  console.log(date.format('dddd, MMMM D'));
+  console.log(isWeekend(date));
+
+  date = dayjs().add(2, 'day');
+  console.log(date.format('dddd, MMMM D'));
+  console.log(isWeekend(date));
+
+  date = dayjs().add(4, 'day');
+  console.log(date.format('dddd, MMMM D'));
+  console.log(isWeekend(date));
+
+  date = dayjs().add(6, 'day');
+  console.log(date.format('dddd, MMMM D'));
+  console.log(isWeekend(date));
+
+  date = dayjs().add(8, 'day');
+  console.log(date.format('dddd, MMMM D'));
+  console.log(isWeekend(date));
+</script>
+</body>
+</html>

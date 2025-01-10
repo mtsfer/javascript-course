@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Exercise 12c</title>
+</head>
+<body>
+<button>Start</button>
+
+<script>
+  function updateButton() {
+      setTimeout(() => document.querySelector("button").textContent = "Finished!", 1000);
+  }
+
+  document.querySelector("button").addEventListener("click", updateButton);
+</script>
+</body>
+</html>

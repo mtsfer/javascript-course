@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Exercise 12h</title>
+</head>
+<body>
+<button class="js-add-message-button">Add</button>
+<button class="js-remove-message-button">Remove</button>
+
+<script>
+    let messages = 2;
+
+    setInterval(() => {
+        if (document.title === "Exercise 12g") {
+            document.title = `(${messages}) New messages`;
+        } else {
+            document.title = "Exercise 12g";
+        }
+    }, 1000);
+
+    function addMessage() {
+        messages++;
+    }
+
+    function removeMessage() {
+        messages--;
+    }
+
+    document.querySelector(".js-add-message-button").addEventListener("click", addMessage);
+    document.querySelector(".js-remove-message-button").addEventListener("click", removeMessage);
+</script>
+</body>
+</html>

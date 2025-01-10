@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 11h</title>
+  </head>
+  <body>
+    <script>
+      console.log(addOne([1, 2, 3]));
+      console.log(addOne([-2, -1, 0, 99]));
+      
+      function addOne(array) {
+        const incrementedNumbers = []
+        for (let i = 0; i < array.length; i++) {
+          incrementedNumbers.push(array[i] + 1);
+        }
+        return incrementedNumbers;
+      }
+    </script>
+  </body>
+</html>

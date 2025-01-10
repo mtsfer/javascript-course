@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>App</title>
+</head>
+<body>
+<button class="js-add-message-button">Add</button>
+<button class="js-remove-message-button">Remove</button>
+
+<script>
+    let intervalId;
+
+    let messages = 2;
+
+    let isDisplayingNotifications = false;
+
+    startMessageNotification();
+
+    function startMessageNotification() {
+        if (isDisplayingNotifications) return;
+
+        isDisplayingNotifications = true;
+
+        intervalId = setInterval(() => {
+            if (document.title === "App") {
+                document.title = `(${messages}) New messages`
+            } else {
+              document.title = "App";
+            }
+        }, 1000);
+    }
+
+    function stopMessageNotification() {
+        clearInterval(intervalId);
+        isDisplayingNotifications = false;
+        document.title = "App";
+    }
+
+    function addMessage() {
+        messages++;
+        if (!isDisplayingNotifications && messages > 0) {
+            startMessageNotification();
+        }
+    }
+
+    function removeMessage() {
+        if (messages === 0) return;
+
+        messages--;
+
+        if (messages === 0) {
+            stopMessageNotification();
+        }
+    }
+
+    document.querySelector(".js-add-message-button").addEventListener("click", addMessage);
+    document.querySelector(".js-remove-message-button").addEventListener("click", removeMessage);
+</script>
+</body>
+</html>

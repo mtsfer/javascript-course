@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 11o</title>
+  </head>
+  <body>
+    <script>
+      function search(strings) {
+        let index = -1;
+        for (let i = 0; i < strings.length; i++) {
+          const str = strings[i];
+          if (str === 'search') {
+            index = i;
+          }
+        }
+        console.log(index);
+      }
+
+      const strings1 = ['hello', 'world', 'search', 'good'];
+      search(strings1);
+
+      const strings2 = ['not', 'found'];
+      search(strings2);
+    </script>
+  </body>
+</html>

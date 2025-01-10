@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 11m</title>
+  </head>
+  <body>
+    <script>
+      console.log(minMax([1, -3, 5]));
+      console.log(minMax([-2, 3, -5, 7, 10]));
+
+      function minMax(nums) {
+        if (nums.length === 0) return { min: null, max: null };
+
+        const result = { min: nums[0], max: nums[0] };
+
+        for (let i = 0; i < nums.length; i++) {
+          const num = nums[i];
+          if (num < result.min) result.min = num;
+          else if (num > result.max) result.max = num;
+        }
+
+        return result;
+      }
+    </script>
+  </body>
+</html>

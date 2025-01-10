@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 9f</title>
+  </head>
+  <body>
+    <input type="text" class="name-input" placeholder="Name" onkeydown="
+      if (event.key === 'Enter') {
+        updateNameDisplay();
+      }
+    ">
+
+    <button onclick="
+      updateNameDisplay();
+    " class="submit-btn">Submit</button>
+
+    <p class="js-name-display"></p>
+
+    <script>
+      function updateNameDisplay() {
+        const name = document.querySelector('.name-input').value;
+        document.querySelector('.js-name-display').innerHTML = `Your name is: ${name}`;
+      }
+    </script>
+  </body>
+</html>
